@@ -167,16 +167,16 @@ $$MSE = 1/n \sum_{i = 1}^{n}(y_i - \underline{(x_1 + x_2 + b)}) ^ 2$$
 
 If our dataset is composed of one row only ($n=1$), the cost equation is simplified to the following
 
-$$MSE = 1/1 \sum_{i = 1}^{1}(y_i - \underline{(x_1 + x_2 + b)}) ^ 2$$
-$$MSE = (y_i - \underline{(x_1 + x_2 + b)}) ^ 2$$
+$$MSE = 1/1 \sum_{i = 1}^{1}(y_i - \underline{(m_1x_1 + m_2x_2 + b)}) ^ 2$$
+$$MSE = (y_i - \underline{(m_1x_1 + m_2x_2 + b)}) ^ 2$$
 
 How can we minimize b so that cost is simplified? We know by calculus that we can take the partial derivative of a the cost function ($MSE$) with respect to $b$, and set the equation to 0, to find the *minimum* of the function.
 
 The partial derivative of $MSE$ with respect to $b$ is:
 
-$$\frac{\partial MSE}{\partial B} = 2(y_i - \underline{(x_1 + x_2 + b)})) $$
+$$\frac{\partial MSE}{\partial B} = -2(y_i - \underline{(m_1x_1 + m_2x_2 + b)})) $$
 
-We can plot this partial derivative (denote as PD in orange) on a graph. Let us set arbitrary values to $x_1, x_2$ for graphing purposes, and use the simplified dataset such that $y_i$ = 1, $x_1 = 2$, $x_2 = 1$
+We can plot this partial derivative (denote as PD in orange) on a graph. Let us set arbitrary values to $x_1, x_2$ for graphing purposes, and use the simplified dataset such that $y_i$ = 1, $x_1 = 2$, $x_2 = 1$, and both parameters of $m$ = 1.
 
 $MSE = (1 - \underline{(2 + 1 + b)}) ^ 2$
 
